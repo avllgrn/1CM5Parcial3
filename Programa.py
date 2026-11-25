@@ -1,19 +1,37 @@
 import subprocess
-
-def f(x):
-    return 5*x**2 - 3*x + 8
+from Clases.ClaseCirculoP import *
 
 if __name__ == '__main__':
     subprocess.run('cls', shell=True)
 
-    ini = float(input('Dame ini '))
-    fin = float(input('Dame fin '))
-    inc = float(input('Dame inc '))
-    print('\n\n')
-    
-    if inc>0:
-        print(f'x\t| f(x) = 5x^2 -3x + 8\n')
-        x = ini
-        while x<=fin:
-            print(f'{x}\t| {f(x)}')
-            x += inc
+    A = Punto2D( )
+    B = Punto2D(1, 1)
+
+    Q1 = CirculoP()
+    print('Q1')
+    print(Q1)
+    print('Q1')
+    Q1.muestraTuEstado()
+    print()
+
+    Q2 = CirculoP(A, B)
+    print('Q2')
+    print(Q2)
+    print('Q2')
+    Q2.muestraTuEstado()
+    print()
+
+    Q3 = CirculoP('Cadena1', 'Cadena2')
+    print('Q3')
+    print(Q3)
+    print('Q3')
+    Q3.muestraTuEstado()
+    print()
+
+    Q3.C = 'Cadena3'
+    Q3.P = 'Cadena4'
+    print('Q3')
+    print(Q3)
+    print('Q3')
+    Q3.muestraTuEstado()
+    print()
