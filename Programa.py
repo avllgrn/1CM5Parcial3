@@ -1,26 +1,33 @@
 import subprocess
-from Clases.ClaseCubo import *
+from Clases.ClasePunto3D import *
 
 if __name__ == '__main__':
     subprocess.run('cls', shell=True)
 
-    C0 = Cubo()
-    print(C0)
-    C0.muestraTuEstado()
+    P0 = Punto3D()
+    print(P0)
+    P0.muestraTuEstado()
     print()
 
-    C = Cubo(1)
+    P = Punto3D('uino', 'dos', 'tres')
 
-    print(C)
-    C.muestraTuEstado()
+    print(P)
+    P.muestraTuEstado()
     print()
 
-    C.pideleAlUsuarioTuEstado()
-    print(C)
-    C.muestraTuEstado()
+    P.pideleAlUsuarioTuEstado()
+    print(P)
+    P.muestraTuEstado()
     print()
 
-    C.lado = 'diez'
-    print(C)
-    C.muestraTuEstado()
+    P.modificaTuEstado('siete', 'ocho', 'nueve')
+    print(P)
+    P.muestraTuEstado()
+    print()
+
+    P.x = 1
+    P.y = 2.5
+    P.z = 3
+    print(P)
+    P.muestraTuEstado()
     print()
