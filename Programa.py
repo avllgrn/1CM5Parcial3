@@ -1,15 +1,15 @@
 import subprocess
-from Clases.ClaseCuadro import *
+from Clases.ClaseCubo import *
 
 if __name__ == '__main__':
     subprocess.run('cls', shell=True)
 
-    P0 = Cuadro()
-    print(P0)
-    P0.muestraTuEstado()
+    C0 = Cubo()
+    print(C0)
+    C0.muestraTuEstado()
     print()
 
-    C = Cuadro(1)
+    C = Cubo(1)
 
     print(C)
     C.muestraTuEstado()
