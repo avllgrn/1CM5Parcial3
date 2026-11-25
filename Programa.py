@@ -1,25 +1,19 @@
 import subprocess
 
+def f(x):
+    return 5*x**2 - 3*x + 8
+
 if __name__ == '__main__':
     subprocess.run('cls', shell=True)
 
-    n = int(input('Ingresa n '))
-
-    s = 0
-    i = 0
-    while i<=n:
-        print(f'i={i},\ts={s}')
-        s = s+i
-        i += 1
-
-    print(f'\n\nSuma de [0, {n}] = {s}\n\n')
-
-
-    p = 1
-    i = 1
-    while i<=n:
-        print(f'i={i},\tp={p}')
-        p = p*i
-        i += 1
-
-    print(f'\n\nProducto de [1, {n}] = {p}\n\n')
+    ini = float(input('Dame ini '))
+    fin = float(input('Dame fin '))
+    inc = float(input('Dame inc '))
+    print('\n\n')
+    
+    if inc>0:
+        print(f'x\t| f(x) = 5x^2 -3x + 8\n')
+        x = ini
+        while x<=fin:
+            print(f'{x}\t| {f(x)}')
+            x += inc
