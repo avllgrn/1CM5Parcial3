@@ -4,10 +4,10 @@ if __name__ == '__main__':
 
     subprocess.run('cls', shell=True)
 
-    a = 0              # Inicio
+    a = 10              # Inicio
 
-    while a < 10:      # Fin
+    while a > 0:        # Fin
 
         print(a)
 
-        a = a+1        # Incremento
+        a = a-1         # Decremento
