@@ -1,37 +1,44 @@
 import subprocess
-from Clases.ClaseCirculoP import *
+from Clases.ClaseRectanguloP import *
 
 if __name__ == '__main__':
     subprocess.run('cls', shell=True)
 
     A = Punto2D( )
-    B = Punto2D(1, 1)
+    B = Punto2D(2, 4)
 
-    Q1 = CirculoP()
-    print('Q1')
-    print(Q1)
-    print('Q1')
-    Q1.muestraTuEstado()
+    R1 = RectanguloP()
+    print('R1')
+    print(R1)
+    print('R1')
+    R1.muestraTuEstado()
     print()
 
-    Q2 = CirculoP(A, B)
-    print('Q2')
-    print(Q2)
-    print('Q2')
-    Q2.muestraTuEstado()
+    R1.pideleAlUsuarioTuEstado()
+    print('R1')
+    print(R1)
+    print('R1')
+    R1.muestraTuEstado()
     print()
 
-    Q3 = CirculoP('Cadena1', 'Cadena2')
-    print('Q3')
-    print(Q3)
-    print('Q3')
-    Q3.muestraTuEstado()
+    R2 = RectanguloP(A, B)
+    print('R2')
+    print(R2)
+    print('R2')
+    R2.muestraTuEstado()
     print()
 
-    Q3.C = 'Cadena3'
-    Q3.P = 'Cadena4'
-    print('Q3')
-    print(Q3)
-    print('Q3')
-    Q3.muestraTuEstado()
+    R3 = RectanguloP('Cadena1', 'Cadena2')
+    print('R3')
+    print(R3)
+    print('R3')
+    R3.muestraTuEstado()
+    print()
+
+    R3.C = 'Cadena3'
+    R3.P = 'Cadena4'
+    print('R3')
+    print(R3)
+    print('R3')
+    R3.muestraTuEstado()
     print()
