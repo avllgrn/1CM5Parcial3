@@ -42,7 +42,10 @@ class CirculoP:
         return cadena
 
     def pideleAlUsuarioTuEstado(self):
-        self.__C = input('Dame mi C ')
+        print('C')
+        self.__C.pideleAlUsuarioTuEstado()
+        print('P')
+        self.__P.pideleAlUsuarioTuEstado()
         self.verificaCirculoP()
 
     def muestraTuEstado(self):

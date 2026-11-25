@@ -19,7 +19,7 @@ class Punto2D:
     def y(self):
         return self.__y
 
-    @x.setter
+    @y.setter
     def y(self, valor):
         self.__y = valor
         self.verificaTuEstado()
