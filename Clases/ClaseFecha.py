@@ -1,5 +1,5 @@
 class Fecha:
-    def __init__(self, dia=0, mes=0, anio=0):
+    def __init__(self, dia=1, mes=1, anio=2026):
         self.__dia = dia
         self.__mes = mes
         self.__anio = anio

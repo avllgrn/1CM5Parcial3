@@ -2,12 +2,12 @@ from Clases.ClaseEvento import *
 
 class Persona:
     def __init__(self, Nombre='', Paterno='', Materno='', Genero='', estatura=0.24, FechaNacimiento=Evento()):
-        self._Nombre = Nombre
-        self._Paterno = Paterno
-        self._Materno = Materno
-        self._Genero = Genero
-        self._estatura = estatura
-        self._FechaNacimiento = FechaNacimiento
+        self.__Nombre = Nombre
+        self.__Paterno = Paterno
+        self.__Materno = Materno
+        self.__Genero = Genero
+        self.__estatura = estatura
+        self.__FechaNacimiento = FechaNacimiento
         self.verificaPersona()
 
     def __del__(self):
@@ -15,109 +15,109 @@ class Persona:
 
     @property
     def Nombre(self):
-        return self._Nombre
+        return self.__Nombre
     
     @Nombre.setter
     def Nombre(self, Nombre):
-        self._Nombre = Nombre
+        self.__Nombre = Nombre
         self.verificaPersona()
 
     @property
     def Paterno(self):
-        return self._Paterno
+        return self.__Paterno
     
     @Paterno.setter
     def Paterno(self, Paterno):
-        self._Paterno = Paterno
+        self.__Paterno = Paterno
         self.verificaPersona()
 
     @property
     def Materno(self):
-        return self._Materno
+        return self.__Materno
     
     @Materno.setter
     def Materno(self, Materno):
-        self._Materno = Materno
+        self.__Materno = Materno
         self.verificaPersona()
 
     @property
     def Genero(self):
-        return self._Genero
+        return self.__Genero
     
     @Genero.setter
     def Genero(self, Genero):
-        self._Genero = Genero
+        self.__Genero = Genero
         self.verificaPersona()
 
     @property
     def estatura(self):
-        return self._estatura
+        return self.__estatura
     
     @estatura.setter
     def estatura(self, estatura):
-        self._estatura = estatura
+        self.__estatura = estatura
         self.verificaPersona()
 
     @property
     def FechaNacimiento(self):
-        return self._FechaNacimiento
+        return self.__FechaNacimiento
     
     @FechaNacimiento.setter
     def FechaNacimiento(self, FechaNacimiento):
-        self._FechaNacimiento = FechaNacimiento
+        self.__FechaNacimiento = FechaNacimiento
         self.verificaPersona()
 
     def __str__(self) -> str:
-        datos = f'Nombre: {self._Nombre}\n'
-        datos += f'Paterno: {self._Paterno}\n'
-        datos += f'Materno: {self._Materno}\n'
-        datos += f'Genero: {self._Genero}\n'
-        datos += f'estatura: {self._estatura}\n'
-        datos += f'FechaNacimiento: {self._FechaNacimiento}\n'
+        datos = f'Nombre: {self.__Nombre}\n'
+        datos += f'Paterno: {self.__Paterno}\n'
+        datos += f'Materno: {self.__Materno}\n'
+        datos += f'Genero: {self.__Genero}\n'
+        datos += f'estatura: {self.__estatura}\n'
+        datos += f'FechaNacimiento: {self.__FechaNacimiento}\n'
         return datos
     
     def pideleAlUsuarioTuEstado(self):
-        self._Nombre = input('Dame mi Nombre ')
-        self._Paterno = input('Dame mi Paterno ')
-        self._Materno = input('Dame mi Materno ')
-        self._Genero = input('Dame mi Genero ')
-        self._estatura = input('Dame mi estatura ')
+        self.__Nombre = input('Dame mi Nombre ')
+        self.__Paterno = input('Dame mi Paterno ')
+        self.__Materno = input('Dame mi Materno ')
+        self.__Genero = input('Dame mi Genero ')
+        self.__estatura = input('Dame mi estatura ')
         print('Dame mi Fecha de Nacimiento')
-        self._FechaNacimiento.pideleAlUsuarioTuEstado()
+        self.__FechaNacimiento.pideleAlUsuarioTuEstado()
         self.verificaPersona()
     
     def muestraTuEstado(self):
         print(self)
 
     def modificaPersona(self, Nombre, Paterno, Materno, Genero, estatura, FechaNacimiento):
-        self._Nombre = Nombre
-        self._Paterno = Paterno
-        self._Materno = Materno
-        self._Genero = Genero
-        self._estatura = estatura
-        self._FechaNacimiento = FechaNacimiento
+        self.__Nombre = Nombre
+        self.__Paterno = Paterno
+        self.__Materno = Materno
+        self.__Genero = Genero
+        self.__estatura = estatura
+        self.__FechaNacimiento = FechaNacimiento
         self.verificaPersona()
 
     def verificaPersona(self):
-        if not isinstance(self._Nombre,str):
-            self._Nombre = ''
+        if not isinstance(self.__Nombre,str):
+            self.__Nombre = ''
 
-        if not isinstance(self._Paterno,str):
-            self._Paterno = ''
+        if not isinstance(self.__Paterno,str):
+            self.__Paterno = ''
 
-        if not isinstance(self._Materno,str):
-            self._Materno = ''
+        if not isinstance(self.__Materno,str):
+            self.__Materno = ''
 
-        if not isinstance(self._Genero,str):
-            self._Genero = ''
+        if not isinstance(self.__Genero,str):
+            self.__Genero = ''
 
         try:
-            self._estatura = float(self._estatura)
+            self.__estatura = float(self.__estatura)
         except:
-            self._estatura = 0.24
+            self.__estatura = 0.24
 
-        if self._estatura<0.24 or self._estatura>2.72:
-            self._estatura = 0.24
+        if self.__estatura<0.24 or self.__estatura>2.72:
+            self.__estatura = 0.24
 
-        if not isinstance(self._FechaNacimiento, Evento):
-            self._FechaNacimiento = Evento()
+        if not isinstance(self.__FechaNacimiento, Evento):
+            self.__FechaNacimiento = Evento()
